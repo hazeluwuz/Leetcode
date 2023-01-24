@@ -12,15 +12,14 @@ class Solution:
         queue = [root]
         nodes = [root.val]
         while(len(queue) > 0):
-            test = []
             queue_len = len(queue)
             for i in range(queue_len):
-                temp = queue.pop(0)
-                if temp.left is not None:
-                    print(temp.left.val)
-                    queue.append(temp.left)
-                if temp.right is not None:
-                    queue.append(temp.right)
+                node = queue.pop(0)
+                if node.left is not None:
+                    print(node.left.val)
+                    queue.append(node.left)
+                if node.right is not None:
+                    queue.append(node.right)
             if len(queue): 
                 nodes.append(queue[-1].val)
         return nodes
