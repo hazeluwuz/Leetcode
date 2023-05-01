@@ -3,4 +3,4 @@ class Solution:
         res = [''] * len(s)
         for i in range(len(s)):
             res[indices[i]] = s[i]
-        return ''.join(res)
+        return ''.join(i for i in res)
