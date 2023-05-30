@@ -1,5 +1,7 @@
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-      for i in nums:
-        if nums.count(i) == 1:
-          return i
+    def singleNumber(self, nums):
+        n = len(nums)
+        c = 0
+        for i in range(n):
+            c = c ^ nums[i]
+        return c
